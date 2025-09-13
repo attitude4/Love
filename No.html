@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>No? 😢</title>
+  <style>
+    body {
+      text-align:center;
+      margin-top:100px;
+      font-family:Arial;
+      background:#f8d7da;
+      overflow:hidden;
+    }
+    #noBtn {
+      padding:10px 20px;
+      background:#ccc;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      position:absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>No?? Are you sure? 🥺</h1>
+  <button id="noBtn">No</button>
+  <p>Try again... maybe say YES 💕</p>
+  <a href="index.html">Back</a>
+
+  <script>
+    const btn = document.getElementById("noBtn");
+    btn.addEventListener("mouseover", () => {
+      btn.style.top = Math.random() * window.innerHeight + "px";
+      btn.style.left = Math.random() * window.innerWidth + "px";
+    });
+  </script>
+</body>
+</html>
