@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yay! ❤️</title>
+  <style>
+    body {
+      text-align:center;
+      margin-top:100px;
+      background:#ffe4e1;
+      font-family:Arial;
+      overflow:hidden;
+    }
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall 6s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>You said YES!! 🎉</h1>
+  <p>You make me the happiest person alive 💖</p>
+  <a href="love.html">Click here for a surprise 🌸</a>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.innerHTML = "🌸";
+      flower.classList.add("flower");
+      flower.style.left = Math.random() * window.innerWidth + "px";
+      flower.style.animationDuration = (3 + Math.random()*3) + "s";
+      document.body.appendChild(flower);
+      setTimeout(() => flower.remove(), 6000);
+    }
+    setInterval(createFlower, 300);
+  </script>
+</body>
+</html>
